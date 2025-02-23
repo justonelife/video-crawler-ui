@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { VcuThemeSwitcherComponent } from '@project/vcu-theme-switcher';
 
 @Component({
@@ -9,6 +9,7 @@ import { VcuThemeSwitcherComponent } from '@project/vcu-theme-switcher';
   ],
   templateUrl: "./vcu-header.component.html",
   styleUrl: "./vcu-header.component.scss",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class VcuHeaderComponent {
 

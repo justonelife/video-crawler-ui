@@ -1,0 +1,40 @@
+@use "core/_variables" as variables;
+
+:root {
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: variables.$fontSize;
+
+  @each $space, $value in variables.$spacing {
+    --spacing-#{$space}: #{$value};
+  }
+
+  @each $color, $value in variables.$color {
+    --color-#{$color}: #{$value};
+  }
+}
+
+.severiry--danger {
+  color: var(--color-danger);
+}
+
+.severiry {
+
+  &--neutral {
+    border: 1px solid var(--color-neutral);
+  }
+  &--info {
+    border: 1px solid var(--color-info);
+  }
+  &--success {
+    border: 1px solid var(--color-success);
+  }
+  &--warning {
+    border: 1px solid var(--color-warning);
+  }
+  &--danger {
+    border: 1px solid var(--color-danger);
+  }
+
+}

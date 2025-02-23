@@ -32,7 +32,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/global.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -99,7 +99,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/global.scss"
             ],
             "scripts": []
           }
@@ -164,6 +164,105 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/vcu-theme-switcher/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "vcu-button": {
+      "projectType": "library",
+      "root": "projects/vcu-button",
+      "sourceRoot": "projects/vcu-button/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/vcu-button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcu-button/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcu-button/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/vcu-button/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "vcu-severity": {
+      "projectType": "library",
+      "root": "projects/vcu-severity",
+      "sourceRoot": "projects/vcu-severity/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/vcu-severity/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcu-severity/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcu-severity/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/vcu-severity/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "vcu-types": {
+      "projectType": "library",
+      "root": "projects/vcu-types",
+      "sourceRoot": "projects/vcu-types/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/vcu-types/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcu-types/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcu-types/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/vcu-types/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
