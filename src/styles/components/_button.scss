@@ -1,0 +1,26 @@
+@use "core/_variables.scss" as variables;
+
+.vcu-button {
+  border-radius: variables.$borderRadius;
+
+  &--small {
+    height: var(--button-small-height);
+    min-width: var(--button-small-min-width);
+    padding: var(--button-small-padding);
+    font-size: var(--button-small-font-size);
+  }
+
+  &--medium {
+    height: var(--button-medium-height);
+    min-width: var(--button-medium-min-width);
+    padding: var(--button-medium-padding);
+    font-size: var(--button-medium-font-size);
+  }
+
+  &--large {
+    height: var(--button-large-height);
+    min-width: var(--button-large-min-width);
+    padding: var(--button-large-padding);
+    font-size: var(--button-large-font-size);
+  }
+}

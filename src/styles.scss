@@ -1,4 +1,5 @@
 @use "core/_variables" as variables;
+@use "components";
 
 :root {
   font-family: "IBM Plex Mono", serif;
@@ -13,38 +14,12 @@
   @each $color, $value in variables.$color {
     --color-#{$color}: #{$value};
   }
+
+  @each $size, $value in variables.$button {
+    @each $prop, $propValue in $value {
+      --button-#{$size}-#{$prop}: #{$propValue};
+    }
+  }
 }
 
-button {
-  border-radius: variables.$borderRadius;
-}
 
-.severity {
-
-  &--neutral {
-    border: 1px solid var(--color-neutral);
-    background-color: var(--color-neutral);
-    color: var(--color-charcoal-black);
-  }
-  &--info {
-    border: 1px solid var(--color-info);
-    background-color:  var(--color-info);
-    color: var(--color-soft-gray);
-  }
-  &--success {
-    border: 1px solid var(--color-success);
-    background-color:  var(--color-success);
-    color: var(--color-soft-gray);
-  }
-  &--warning {
-    border: 1px solid var(--color-warning);
-    background-color:  var(--color-warning);
-    color: var(--color-soft-gray);
-  }
-  &--danger {
-    border: 1px solid var(--color-danger);
-    background-color:  var(--color-danger);
-    color: var(--color-soft-gray);
-  }
-
-}
