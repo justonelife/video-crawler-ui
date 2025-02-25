@@ -270,6 +270,39 @@
           }
         }
       }
+    },
+    "vcu-core": {
+      "projectType": "library",
+      "root": "projects/vcu-core",
+      "sourceRoot": "projects/vcu-core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/vcu-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcu-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcu-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/vcu-core/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

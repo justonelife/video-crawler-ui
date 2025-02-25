@@ -27,7 +27,7 @@
     "paths": {
       "@project/*": [
         "projects/*/src/public-api.ts"
-      ],
+      ]
     }
   },
   "angularCompilerOptions": {
