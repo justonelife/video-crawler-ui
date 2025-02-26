@@ -1,26 +1,25 @@
 @use "core/_variables.scss" as variables;
 
+@mixin commonStyles($size) {
+  height: var(--button-#{$size}-height);
+  min-width: var(--button-#{$size}-min-width);
+  padding: var(--button-#{$size}-padding);
+  font-size: var(--button-#{$size}-font-size);
+}
+
 .vcu-button {
   border-radius: variables.$borderRadius;
+  cursor: pointer;
 
   &--small {
-    height: var(--button-small-height);
-    min-width: var(--button-small-min-width);
-    padding: var(--button-small-padding);
-    font-size: var(--button-small-font-size);
+    @include commonStyles(small);
   }
 
   &--medium {
-    height: var(--button-medium-height);
-    min-width: var(--button-medium-min-width);
-    padding: var(--button-medium-padding);
-    font-size: var(--button-medium-font-size);
+    @include commonStyles(medium);
   }
 
   &--large {
-    height: var(--button-large-height);
-    min-width: var(--button-large-min-width);
-    padding: var(--button-large-padding);
-    font-size: var(--button-large-font-size);
+    @include commonStyles(large);
   }
 }
