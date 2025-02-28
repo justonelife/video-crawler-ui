@@ -1,5 +1,4 @@
 import { Directive, ElementRef, inject, input, OnDestroy, OnInit } from "@angular/core";
-import { Subject } from "rxjs";
 
 @Directive({
   selector: '[lib-vcu-lazy-load-video]',
@@ -34,7 +33,6 @@ export class VcuLazyLoadVideoDirective implements OnInit, OnDestroy {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
 
-          console.log('intersected');
 
           this.load(this.elementRef.nativeElement);
           this.observer?.unobserve(this.elementRef.nativeElement);
